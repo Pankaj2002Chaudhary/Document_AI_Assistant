@@ -15,7 +15,16 @@ from vector_store import VectorStore
 
 load_dotenv()  # reads .env into environment variables
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+# GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+import streamlit as st
+
+def get_api_key():
+    try:
+        return st.secrets["GROQ_API_KEY"]
+    except (KeyError, FileNotFoundError):
+        return os.getenv("GROQ_API_KEY")
+
+GROQ_API_KEY = get_api_key()
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.3-70b-versatile"  # check console.groq.com/docs/models for current options
 
