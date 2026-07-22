@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+test_store/
+docs/*.pdf
+docs/*.docx
+docs/*.csv

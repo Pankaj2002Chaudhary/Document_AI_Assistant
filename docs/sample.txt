@@ -1,0 +1,72 @@
+Artificial Intelligence (AI) is the field of computer science that focuses on creating systems capable of performing tasks that typically require human intelligence. These tasks include learning from data, reasoning, problem-solving, language understanding, and decision-making.
+
+Machine Learning (ML) is a subset of AI where algorithms learn patterns from historical data instead of being explicitly programmed. Supervised learning uses labeled datasets, while unsupervised learning discovers hidden structures in unlabeled data. Reinforcement learning trains agents through rewards and penalties.
+
+Deep Learning is a specialized branch of machine learning that uses neural networks with multiple hidden layers. Popular architectures include Convolutional Neural Networks (CNNs) for image processing, Recurrent Neural Networks (RNNs) for sequential data, and Transformers for natural language processing.
+
+Retrieval-Augmented Generation (RAG) combines information retrieval with large language models. Instead of relying only on the model's internal knowledge, RAG retrieves relevant information from external documents before generating a response. This approach improves factual accuracy and reduces hallucinations.
+
+A typical RAG pipeline consists of the following stages:
+1. Document Loading
+2. Text Preprocessing
+3. Chunking
+4. Embedding Generation
+5. Vector Database Storage
+6. Similarity Search
+7. Prompt Construction
+8. Response Generation using an LLM
+
+Chunking is one of the most important steps in a RAG system. If chunks are too small, important context may be lost. If chunks are too large, irrelevant information may be retrieved and the context window of the language model may be wasted. A common chunk size ranges between 500 and 1000 characters with an overlap of 100 to 200 characters.
+
+Embeddings are dense numerical vectors that represent the semantic meaning of text. Similar sentences have embedding vectors that are close to each other in high-dimensional space. Models such as sentence-transformers/all-MiniLM-L6-v2 are commonly used for generating embeddings efficiently.
+
+Vector databases store embedding vectors and enable fast similarity search. FAISS is an open-source library developed by Meta for efficient nearest neighbor search. Other popular vector databases include ChromaDB, Pinecone, Weaviate, Milvus, and Qdrant.
+
+Cosine similarity measures the angle between two vectors and is widely used for comparing embeddings. A cosine similarity value close to 1 indicates that two pieces of text are semantically similar.
+
+Prompt engineering is the process of designing prompts that guide the language model to generate accurate responses. In RAG systems, retrieved document chunks are inserted into the prompt so that the model answers based only on the provided context.
+
+Python is one of the most popular programming languages for AI development because of its simplicity and rich ecosystem. Libraries such as NumPy, Pandas, PyTorch, TensorFlow, Scikit-learn, and Hugging Face Transformers provide powerful tools for building AI applications.
+
+Streamlit is a Python framework that enables developers to build interactive web applications with minimal code. It is commonly used for data science dashboards, machine learning demos, and AI-powered chat applications.
+
+Good software engineering practices include writing modular code, maintaining clear folder structures, using virtual environments, adding documentation, handling exceptions properly, and writing unit tests. These practices improve maintainability and collaboration.
+
+Example Company Information:
+
+Company: TechNova Solutions
+Founded: 2018
+Headquarters: Bengaluru, India
+Employees: Approximately 450
+CEO: Ananya Sharma
+
+Products:
+- AI Analytics Platform
+- Document Intelligence System
+- Customer Support Chatbot
+- Automated Report Generator
+
+TechNova recently migrated its document search system from keyword-based search to a Retrieval-Augmented Generation architecture. The migration reduced average response time by 35% and improved answer accuracy according to internal benchmarks.
+
+Employee Benefits:
+- Flexible working hours
+- Hybrid work policy
+- Health insurance
+- Learning budget of ₹50,000 per year
+- Annual performance bonus
+
+Project Apollo is an internal initiative to build a multilingual document assistant capable of understanding PDF, DOCX, TXT, and CSV files. The project uses FAISS for vector search, Sentence Transformers for embeddings, and Grok as the language model.
+
+Meeting Notes (15 July 2026):
+
+- Finalize document ingestion pipeline.
+- Add support for multiple file uploads.
+- Implement source citations in responses.
+- Store vector database locally.
+- Deploy the application using Streamlit.
+- Add conversation history.
+- Optimize chunk size after testing.
+
+Conclusion:
+
+A well-designed RAG application can significantly improve document search and question answering by combining semantic retrieval with the reasoning capabilities of modern language models. Building such a system provides practical experience in natural language processing, vector databases, prompt engineering, and AI application development.
